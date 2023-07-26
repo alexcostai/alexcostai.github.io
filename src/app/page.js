@@ -1,95 +1,45 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+//mui
+import { Grid } from "@mui/material";
+import { ArrowDropUp } from "@mui/icons-material";
+//porject imports
+import useHomePage from "@/hooks/useHomePage";
+import CustomButton from "@/components/CustomButton";
+import SectionDivider from "@/components/SectionDivider";
+import MainSection from "@/components/sections/MainSection";
+import FooterSection from "@/components/sections/FooterSection";
+import AboutMeSection from "@/components/sections/AboutMeSection";
+import ContactSection from "@/components/sections/ContactSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 export default function Home() {
+  const [classes, references, scrollTo, hidesToTop] = useHomePage();
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className={classes.mainContainer} ref={references.top}>
+      <div className={`${classes.pattern} pattern-dots-xl`}></div>
+      <Grid container maxWidth={1250}>
+        <MainSection scrollTo={scrollTo} />
+        <SectionDivider />
+        <ProjectsSection reference={references.projects} />
+        <SectionDivider />
+        <AboutMeSection reference={references.aboutMe} />
+        <SectionDivider />
+        <ContactSection reference={references.contact} />
+        <SectionDivider />
+        <FooterSection />
+      </Grid>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <CustomButton
+        className={classes.toTop}
+        sx={{
+          opacity: !hidesToTop ? "1" : "0",
+          visibility: hidesToTop ? "hidden" : "visible",
+        }}
+        onClick={() => scrollTo("top")}
+      >
+        <ArrowDropUp />
+      </CustomButton>
     </main>
-  )
+  );
 }
