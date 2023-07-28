@@ -36,10 +36,14 @@ const tools = [
   "Javascript",
   "React.js",
   "Next.js",
+  "Redux",
   "Expo",
   "Web3",
-  "Redux",
+  "HTML",
+  "CSS",
+  "Bootstrap",
   "Material UI",
+  "Styled Components",
 ];
 
 export default function ({ reference }) {

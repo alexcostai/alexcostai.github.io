@@ -103,6 +103,7 @@ export default function MainSection({ scrollTo }) {
               src={PersonalPhoto}
               alt="personal-photo"
               className={classes.personalImg}
+              priority
             />
             <div className={classes.socialMediaContainer}>
               <Link
