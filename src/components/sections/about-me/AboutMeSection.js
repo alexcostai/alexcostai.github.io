@@ -1,6 +1,10 @@
+import Image from "next/image";
 //mui
-import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
+//project imports
+import { toolsIcons } from "@/helpers/icons";
+import IconsList from "./IconsList";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,10 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
   toolsContainer: {
     display: "flex",
+    flexWrap: "wrap",
     alignItems: "center",
-    backgroundColor: theme.palette.primary.main,
-    border: `2px solid ${theme.palette.secondary.dark}`,
-    borderRadius: "0.2rem",
+    gap: 8,
     [theme.breakpoints.down("680")]: {
       order: 1,
       justifyContent: "center",
@@ -31,21 +34,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const tools = [
-  "React Native",
-  "Javascript",
-  "React.js",
-  "Next.js",
-  "Redux",
-  "Expo",
-  "Web3",
-  "HTML",
-  "CSS",
-  "Bootstrap",
-  "Material UI",
-  "Styled Components",
-];
-
 export default function ({ reference }) {
   const theme = useTheme();
   const classes = useStyles();
@@ -58,15 +46,7 @@ export default function ({ reference }) {
         </Typography>
       </Grid>
       <Grid item xs={matchDown680 ? 12 : 4} className={classes.toolsContainer}>
-        <ul
-          style={{ display: matchDown680 ? "flex" : "block", flexWrap: "wrap" }}
-        >
-          {tools.map((tool) => (
-            <li key={tool} style={{ marginRight: "30px" }}>
-              {tool}
-            </li>
-          ))}
-        </ul>
+        <IconsList />
       </Grid>
       <Grid item xs={matchDown680 ? 12 : 6} className={classes.detailContainer}>
         <Typography variant="h6">

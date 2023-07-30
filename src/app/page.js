@@ -9,9 +9,9 @@ import CustomButton from "@/components/CustomButton";
 import SectionDivider from "@/components/SectionDivider";
 import MainSection from "@/components/sections/MainSection";
 import FooterSection from "@/components/sections/FooterSection";
-import AboutMeSection from "@/components/sections/AboutMeSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import AboutMeSection from "@/components/sections/about-me/AboutMeSection";
 
 export default function Home() {
   const [classes, references, scrollTo, hidesToTop] = useHomePage();
