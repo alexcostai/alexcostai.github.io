@@ -6,6 +6,7 @@ import { Button, Divider, Grid, Link, Typography } from "@mui/material";
 //project imports
 import CustomButton from "../CustomButton";
 import PersonalPhoto from "@/../public/images/profile-photo.jpg";
+import SocialMediaIcon from "../SocialMediaIcon";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -56,18 +57,6 @@ const useStyles = makeStyles((theme) => ({
     gap: 10,
     marginTop: "5px",
   },
-  socialMediaBtn: {
-    color: theme.palette.primary.contrastText,
-    background: "none",
-    border: "none",
-    outline: "inherit",
-    transition: "0.3s ease-in-out",
-    "&:hover": {
-      cursor: "pointer",
-      transform: "scale(1.2)",
-      color: `${theme.palette.primary.contrastText} !important`,
-    },
-  },
 }));
 
 export default function MainSection({ scrollTo }) {
@@ -106,27 +95,18 @@ export default function MainSection({ scrollTo }) {
               priority
             />
             <div className={classes.socialMediaContainer}>
-              <Link
-                href="https://www.linkedin.com/in/alexcostai/"
-                target="_blank"
-                className={classes.socialMediaBtn}
-              >
-                <LinkedIn />
-              </Link>
-              <Link
-                href="https://github.com/alexcostai"
-                target="_blank"
-                className={classes.socialMediaBtn}
-              >
-                <GitHub />
-              </Link>
-              <Link
-                href="mailto:alexunio28@gmail.com"
-                target="_blank"
-                className={classes.socialMediaBtn}
-              >
-                <Email />
-              </Link>
+              <SocialMediaIcon
+                href={"https://www.linkedin.com/in/alexcostai/"}
+                icon={<LinkedIn />}
+              />
+              <SocialMediaIcon
+                href={"https://github.com/alexcostai/"}
+                icon={<GitHub />}
+              />
+              <SocialMediaIcon
+                href={"mailto:alexunio28@gmail.com"}
+                icon={<Email />}
+              />
             </div>
           </div>
           <div className={classes.personalInfoContent}>

@@ -10,8 +10,8 @@ import SectionDivider from "@/components/SectionDivider";
 import MainSection from "@/components/sections/MainSection";
 import FooterSection from "@/components/sections/FooterSection";
 import ContactSection from "@/components/sections/ContactSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
 import AboutMeSection from "@/components/sections/about-me/AboutMeSection";
+import ProjectsSection from "@/components/sections/projects/ProjectsSection";
 
 export default function Home() {
   const [classes, references, scrollTo, hidesToTop] = useHomePage();

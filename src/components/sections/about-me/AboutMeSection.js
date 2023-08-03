@@ -1,10 +1,8 @@
-import Image from "next/image";
 //mui
 import { makeStyles, useTheme } from "@mui/styles";
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 //project imports
-import { toolsIcons } from "@/helpers/icons";
-import IconsList from "./IconsList";
+import IconsList from "../../IconsList";
 
 const useStyles = makeStyles((theme) => ({
   container: {

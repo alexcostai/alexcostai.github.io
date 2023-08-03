@@ -31,17 +31,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function IconsList() {
+export default function IconsList({ icons = null }) {
   const classes = useStyles();
-  return toolsIcons.map((icon) => (
-    <div className={classes.iconContainer} key={icon.id}>
-      <div
-        className={classes.iconImgContainer}
-        style={{ backgroundColor: icon.color }}
-      >
-        <Image src={icon.icon} alt={icon.name} className={classes.iconImg} />
+  const iconsList = icons || Object.values(toolsIcons);
+  return iconsList.map((icon) => {
+    const toolIcon = icons ? toolsIcons[icon] : icon;
+    return (
+      <div className={classes.iconContainer} key={toolIcon.name}>
+        <div
+          className={classes.iconImgContainer}
+          style={{ backgroundColor: toolIcon.color }}
+        >
+          <Image
+            src={toolIcon.icon}
+            alt={toolIcon.name}
+            className={classes.iconImg}
+          />
+        </div>
+        <Typography className={classes.iconName}>{toolIcon.name}</Typography>
       </div>
-      <Typography className={classes.iconName}>{icon.name}</Typography>
-    </div>
-  ));
+    );
+  });
 }
