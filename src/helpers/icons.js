@@ -34,6 +34,11 @@ export const toolsIcons = {
   nextjs: { icon: NextjsIcon, name: "Next.js", color: "#ffffff" },
   redux: { icon: ReduxIcon, name: "Redux", color: "#764ABC" },
   web3: { icon: WebjsIcon, name: "Web3.js", color: "#F16822" },
+  firebase: {
+    icon: FirebaseIcon,
+    name: "Firebase",
+    color: "#FFCA28",
+  },
   axios: {
     icon: AxiosIcon,
     name: "Axios",
@@ -45,10 +50,5 @@ export const toolsIcons = {
     icon: StyledComponentIcon,
     name: "Styled Components",
     color: "#DB7093",
-  },
-  firebase: {
-    icon: FirebaseIcon,
-    name: "Firebase",
-    color: "#FFCA28",
   },
 };
