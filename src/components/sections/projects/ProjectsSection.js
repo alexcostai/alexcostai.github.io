@@ -29,8 +29,10 @@ export default function ProjectsSection({ reference }) {
       </Grid>
       <ProjectsList
         projects={projects}
-        setOpenDrawer={setOpenDrawer}
-        setSelectedProject={setSelectedProject}
+        onClickItem={(project) => {
+          setSelectedProject(project);
+          setOpenDrawer(true);
+        }}
       />
       <ProjectDrawer
         project={selectedProject}

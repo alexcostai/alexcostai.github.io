@@ -2,13 +2,12 @@
 
 //mui
 import { Grid } from "@mui/material";
-import { ArrowDropUp } from "@mui/icons-material";
 //porject imports
 import useHomePage from "@/hooks/useHomePage";
-import CustomButton from "@/components/CustomButton";
 import SectionDivider from "@/components/SectionDivider";
-import MainSection from "@/components/sections/MainSection";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import FooterSection from "@/components/sections/FooterSection";
+import MainSection from "@/components/sections/main/MainSection";
 import ContactSection from "@/components/sections/ContactSection";
 import AboutMeSection from "@/components/sections/about-me/AboutMeSection";
 import ProjectsSection from "@/components/sections/projects/ProjectsSection";
@@ -30,16 +29,7 @@ export default function Home() {
         <FooterSection />
       </Grid>
 
-      <CustomButton
-        className={classes.toTop}
-        sx={{
-          opacity: !hidesToTop ? "1" : "0",
-          visibility: hidesToTop ? "hidden" : "visible",
-        }}
-        onClick={() => scrollTo("top")}
-      >
-        <ArrowDropUp />
-      </CustomButton>
+      <ScrollToTopButton onClick={() => scrollTo("top")} isOnTop={hidesToTop} />
     </main>
   );
 }

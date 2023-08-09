@@ -21,15 +21,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
   },
-  toTop: {
-    right: "3%",
-    bottom: "3%",
-    position: "fixed !important",
-    color: theme.palette.secondary.main,
-    [theme.breakpoints.down(680)]: {
-      padding: "0 !important",
-    },
-  },
 }));
 
 export default function useHomePage() {
