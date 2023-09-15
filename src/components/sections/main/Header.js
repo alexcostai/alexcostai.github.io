@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({ scrollTo }) {
   const classes = useStyles();
   return (
     <Grid container sx={{ paddingInline: "5%" }}>

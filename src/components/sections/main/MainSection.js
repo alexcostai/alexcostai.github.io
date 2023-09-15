@@ -45,7 +45,7 @@ export default function MainSection({ scrollTo }) {
   const classes = useStyles();
   return (
     <>
-      <Header />
+      <Header scrollTo={scrollTo} />
       <Grid container sx={{ paddingInline: "10%" }}>
         <Grid item xs={12} className={classes.personalInfoContainer}>
           <div>

@@ -28,6 +28,11 @@ import CirujanoMLImg5 from "@/../public/images/projects/cirujano-ml/5.png";
 //weather-app-images
 import WeatherAppImg1 from "@/../public/images/projects/weather-app/1.png";
 import WeatherAppImg2 from "@/../public/images/projects/weather-app/2.png";
+//crypto-wallet-images
+import CryptoWalletImg1 from "@/../public/images/projects/crypto-wallet/1.png";
+import CryptoWalletImg2 from "@/../public/images/projects/crypto-wallet/2.png";
+import CryptoWalletImg3 from "@/../public/images/projects/crypto-wallet/3.png";
+import CryptoWalletImg4 from "@/../public/images/projects/crypto-wallet/4.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -72,12 +77,37 @@ const projects = [
   },
   {
     type: "Trabajo - Desarrollo FrontEnd",
-    title: "Color Tester",
-    images: [ColorSelectorImg],
+    title: "Crypto Wallet",
+    images: [
+      CryptoWalletImg1,
+      CryptoWalletImg2,
+      CryptoWalletImg3,
+      CryptoWalletImg4,
+    ],
     description:
-      "Probador de estilos para facilitarle al cliente la selección de color para el Dashboard Web.",
-    technologies: ["javascript", "react", "redux", "mui"],
+      "Billetera digital crypto para la oferta del token privado del proyecto.",
+    descriptionDots: [
+      "Registro o ingreso de su cuenta.",
+      "Creación o ingreso de su billetera digital de criptomonedas.",
+      "Compra, envio y recepción de los tokens privados del proyecto.",
+    ],
+    technologies: [
+      "javascript",
+      "reactnative",
+      "web3",
+      "redux",
+      "axios",
+      "css3",
+    ],
   },
+  // {
+  //   type: "Trabajo - Desarrollo FrontEnd",
+  //   title: "Color Tester",
+  //   images: [ColorSelectorImg],
+  //   description:
+  //     "Probador de estilos para facilitarle al cliente la selección de color para el Dashboard Web.",
+  //   technologies: ["javascript", "react", "redux", "mui"],
+  // },
   {
     type: "Trabajo - Desarrollo FrontEnd",
     title: "Cirujano ML",

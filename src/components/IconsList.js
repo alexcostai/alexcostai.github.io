@@ -4,8 +4,8 @@ import { toolsIcons } from "@/helpers/icons";
 
 export default function IconsList({ icons = null }) {
   const iconsList = icons || Object.values(toolsIcons);
-  return iconsList.map((icon) => {
+  return iconsList.map((icon, idx) => {
     const toolIcon = icons ? toolsIcons[icon] : icon;
-    return <IconItem toolIcon={toolIcon} key={icon.name} />;
+    return <IconItem toolIcon={toolIcon} key={`${icon.name}-${idx}`} />;
   });
 }
