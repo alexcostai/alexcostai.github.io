@@ -17,8 +17,6 @@ import DashboardImg11 from "@/../public/images/projects/dashboard-web/11.png";
 import DashboardImg12 from "@/../public/images/projects/dashboard-web/12.png";
 import DashboardImg13 from "@/../public/images/projects/dashboard-web/13.png";
 import DashboardImg14 from "@/../public/images/projects/dashboard-web/14.png";
-//color-selector-images
-import ColorSelectorImg from "@/../public/images/projects/color-tester/1.png";
 //cirujano-ml-images
 import CirujanoMLImg1 from "@/../public/images/projects/cirujano-ml/1.png";
 import CirujanoMLImg2 from "@/../public/images/projects/cirujano-ml/2.png";
@@ -100,14 +98,6 @@ const projects = [
       "css3",
     ],
   },
-  // {
-  //   type: "Trabajo - Desarrollo FrontEnd",
-  //   title: "Color Tester",
-  //   images: [ColorSelectorImg],
-  //   description:
-  //     "Probador de estilos para facilitarle al cliente la selección de color para el Dashboard Web.",
-  //   technologies: ["javascript", "react", "redux", "mui"],
-  // },
   {
     type: "Trabajo - Desarrollo FrontEnd",
     title: "Cirujano ML",
