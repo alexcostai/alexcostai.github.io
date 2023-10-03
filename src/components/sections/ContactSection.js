@@ -31,10 +31,15 @@ export default function ContactSection({ reference }) {
         </Typography>
       </Grid>
       <Grid item xs={12} className={classes.btnsContainer}>
-        <CustomButton href="https://www.linkedin.com/in/alexcostai/">
+        <CustomButton
+          href="https://www.linkedin.com/in/alexcostai/"
+          target="_blank"
+        >
           Linkedin
         </CustomButton>
-        <CustomButton href="https://github.com/alexcostai">Github</CustomButton>
+        <CustomButton href="https://github.com/alexcostai" target="_blank">
+          Github
+        </CustomButton>
         <CustomButton href="mailto:alexunio28@gmail.com">Email</CustomButton>
       </Grid>
     </Grid>

@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ({ reference }) {
+export default function AboutMeSection({ reference }) {
   const theme = useTheme();
   const classes = useStyles();
   const matchDown680 = useMediaQuery(theme.breakpoints.down("680"));

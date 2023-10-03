@@ -21,6 +21,8 @@
     "react-swipeable-views-utils": "^0.14.0"
   },
   "devDependencies": {
-    "@types/react-swipeable-views-utils": "^0.13.4"
+    "@types/react-swipeable-views-utils": "^0.13.4",
+    "eslint": "8.50.0",
+    "eslint-config-next": "13.5.4"
   }
 }
