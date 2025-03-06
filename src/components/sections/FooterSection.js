@@ -14,7 +14,7 @@ export default function FooterSection() {
   return (
     <Grid container className={classes.container}>
       <Grid item xs={12} display={"flex"} justifyContent={"center"}>
-        <Typography>© Alex Costa 2023. All rights reserved.</Typography>
+        <Typography>© Alex Costa 2025. All rights reserved.</Typography>
       </Grid>
     </Grid>
   );

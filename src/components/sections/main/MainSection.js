@@ -75,8 +75,8 @@ export default function MainSection({ scrollTo }) {
               Desarrollador Front-End
             </Typography>
             <Typography variant="h6">
-              Hola 👋. Me llamo Alex Costa, actualmente estoy viviendo en
-              Argentina y trabajo en remoto con el mundo.
+              Hola 👋. Me llamo Alex Costa, actualmente estoy en búsqueda de un
+              trabajo que me permita crecer como profesional.
             </Typography>
           </div>
         </Grid>
