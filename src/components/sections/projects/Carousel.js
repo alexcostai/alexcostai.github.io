@@ -63,6 +63,7 @@ export default function Carousel({ images }) {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+        autoplay={false}
       >
         {images.map((image, idx) => (
           <div key={idx}>
